@@ -1,0 +1,83 @@
+.console-viewport {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--industrial-color-background);
+  color: var(--industrial-color-textPrimary);
+  padding: var(--industrial-spacing-3);
+}
+
+.console-panel {
+  background-color: var(--industrial-color-surface);
+  padding: var(--industrial-spacing-4);
+  border-radius: var(--industrial-radius-md);
+  box-shadow: var(--industrial-shadow-depth1);
+  border: 1px solid var(--industrial-color-outline);
+  display: flex;
+  flex-direction: column;
+  gap: var(--industrial-spacing-3);
+  width: min(420px, 90vw);
+}
+
+.console-heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--industrial-spacing-1);
+}
+
+.console-heading__title {
+  font-family: var(--industrial-typography-fontFamily);
+  font-size: var(--industrial-typography-titleSize);
+  font-weight: var(--industrial-typography-buttonWeight);
+  color: var(--industrial-color-textPrimary);
+}
+
+.console-heading__subtitle {
+  font-family: var(--industrial-typography-fontFamily);
+  font-size: var(--industrial-typography-bodySize);
+  color: var(--industrial-color-textSecondary);
+}
+
+.console-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--industrial-spacing-2);
+}
+
+.console__button {
+  font-family: var(--industrial-typography-fontFamily);
+  font-size: var(--industrial-typography-bodySize);
+  font-weight: var(--industrial-typography-buttonWeight);
+  color: var(--industrial-color-surface);
+  padding: var(--industrial-spacing-1) var(--industrial-spacing-2);
+  border: none;
+  border-radius: var(--industrial-radius-sm);
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.console__button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.console__button:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.console__button[data-tone="accentPrimary"] {
+  background-color: var(--industrial-color-accentPrimary);
+}
+
+.console__button[data-tone="accentSecondary"] {
+  background-color: var(--industrial-color-accentSecondary);
+}
+
+.console__button[data-tone="accentDanger"] {
+  background-color: var(--industrial-color-accentDanger);
+}
